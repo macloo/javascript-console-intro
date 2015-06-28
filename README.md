@@ -18,10 +18,10 @@ And along with the Console, type or copy/paste from that page to begin to unders
 
 After that, this second file -- [JavaScript Functions](http://macloo.github.io/javascript-console-intro/functions.html), also used in conjunction with the Console -- can help a newbie understand:
 
-1. Creating and calling a functions
+1. Creating and calling a function
 2. Arguments
 3. Returns
 4. Scope
 
 The order of examples follows Chapter 19 in *Learning Web Design Fourth Edition
-A Beginner’s Guide to HTML, CSS, JavaScript, and Web Graphics,* by Jennifer Niederst Robbins. The examples are my own, although they are aligned with examples given in the chapter. 
+A Beginner’s Guide to HTML, CSS, JavaScript, and Web Graphics,* by Jennifer Niederst Robbins. The examples are my own, although they are aligned with examples given in the chapter.
