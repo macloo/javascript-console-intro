@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> JavaScript Functions </title>
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+<h1>JavaScript Functions</h1>
+
+<p>Previous: <a href="intro.html">JavaScript Intro</a></p>
+
+<p>JavaScript has many built-in (or "native") functions. Three of these are:</p>
+<ul>
+	<li><code>alert()</code></li>
+	<li><code>confirm()</code></li>
+	<li><code>prompt()</code></li>
+</ul>
+
+<p>Functions can be placed <em>inside</em> other functions. Here is an example of a custom function (one you could write yourself) that incorporates two of the native functions just mentioned.</p>
+<pre><code>function getPet() {
+	var petName = prompt("Type the name of your pet: ");
+	alert("Your pet's name is " + petName + "!");
+}
+</code></pre>
+
+<p>The function will not run (or "execute") until you call it. To call it, you must use its name:</p>
+<pre><code>getPet();
+</code></pre>
+
+<p>A function might be short or long. We can add more instructions to our function. Let's add just one more:</p>
+
+<pre><code>function getPet() {
+	confirm("Do you want to discuss your pet?");
+	var petName = prompt("Type the name of your pet: ");
+	alert("Your pet's name is " + petName + "!");
+}
+</code></pre>
+
+<p>To execute the function, do exactly the same as before:</p>
+<pre><code>getPet();
+</code></pre>
+
+<p>Now let's get fancy and add an if-statement:</p>
+
+<pre><code>function getPet() {
+	var discussPet = confirm("Do you want to discuss your pet?");
+	if (discussPet > 0) {
+		var petName = prompt("Type the name of your pet: ");
+		alert("Your pet's name is " + petName + "!");
+	} else {
+		alert("Okay, goodbye!");
+	}
+}
+
+getPet();
+</code></pre>
+
+<h2>Arguments</h2>
+
+<p>If a function takes arguments, these must appear in the parentheses after the function's name. When we define the function (using the <em>function</em> keyword), we also define how the arguments will be used.</p>
+
+<pre><code>function getVolume(length, width, height) {
+	var volume = length * width * height;
+	alert("The volume is: " + volume)
+}
+</code></pre>
+
+<p>When we call the function, all the arguments (three arguments, in this case) must be provided:</p>
+
+<pre><code>getVolume(5, 3, 10);
+</code></pre>
+
+<h2>Return</h2>
+
+<p>The <em>return</em> keyword is used inside a function to get a value, or values, out of the function so the values (the results of your function) can be used elsewhere in your script.</p>
+
+<pre><code>function getVolume(length, width, height) {
+	var volume = length * width * height;
+	return volume;
+}
+
+alert( getVolume(5, 3, 10) );
+</code></pre>
+
+<p>Now one more change, and our function looks more like what a real programmer would write, using <em>return</em>:</p>
+
+<pre><code>function getVolume(length, width, height) {
+	return length * width * height;
+}
+
+alert( getVolume(5, 3, 10) );
+</code></pre>
+
+<p>Note that the <em>return</em> keyword can be used only ONCE in a function, and if there are any instructions following the <em>return</em> instruction, they will not be executed. The exception to this is when the <em>return</em> instruction is inside an if-statement.</p>
+
+<pre><code>function getPet() {
+	var discussPet = confirm("Do you want to discuss your pet?");
+	if (discussPet > 0) {
+		var petName = prompt("Type the name of your pet: ");
+		return "Your pet's name is " + petName + "!";
+	} else {
+		return "Okay, goodbye!";
+	}
+}
+
+alert ( getPet() );
+</code></pre>
+
+<p>In the case above, we see two <em>return</em> instructions, but only ONE  will be executed. Which one depends on your answer to the first question, "Do you want to discuss your pet?" If you select OK, the value of your answer is <em>true,</em> which is the same as 1. If you select Cancel, the value of your answer is <em>false,</em> which is the same as 0.</p>
+
+<h2>Scope</h2>
+
+<p>Here is an example to illustrate global and local scope for variables.</p>
+
+<p>Step 1. Type or copy/paste into the JavaScript console:</p>
+<pre><code>var petName = "Truman Cat";
+</code></pre>
+
+<p>Step 2. Copy all four lines, then paste into the JavaScript console:</p>
+<pre><code>function getPet() {
+	var petName = prompt("Type the name of your pet: ");
+	alert("Your pet's name is " + petName + "!");
+}
+</code></pre>
+
+<p>Step 3. Type or copy/paste into the JavaScript console:</p>
+<pre><code>getPet();
+</code></pre>
+
+<p>When you type your pet's name into the Prompt dialog box, be sure to type something <em>other than</em> "Truman Cat."</p>
+
+<p>Step 4. Type or copy/paste into the JavaScript console:</p>
+<pre><code>alert("The variable petName is " + petName + ".");
+</code></pre>
+
+<p>What this proves is that when you used <code>var petName</code> inside the function, you made a <strong>local</strong> variable that was isolated inside the function. It had no effect on the <strong>global</strong> variable <code>petName</code> (declared outside the function), and so the value of the global variable remained unchanged: "Truman Cat."</p>
+
+<p>What if you wanted to change the value of the global variable via instructions inside your function? (This can be risky.) To do so, change just one thing inside the function: omit the <em>var</em> keyword. If you do, the <strong>global</strong> variable <code>petName</code> will be changed when your function runs.</p>
+
+</body>
+</html>

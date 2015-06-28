@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> JavaScript Intro </title>
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+<h1>JavaScript Intro</h1>
+
+<p>These are demonstrations you should try yourself. In Chrome, open the <strong>View</strong> menu, go to Developer, go to JavaScript Console.</p>
+
+<img src="images/open_console.png" alt="Screen capture: How to open the Console">
+
+<p>Make sure the option <strong>Console</strong> at the far right is selected. Now you have a command line where you can practice JavaScript.</p>
+
+<img src="images/first_console.png" alt="Screen capture: The Console, ready for action">
+
+<h2>Demo 1: Variables</h2>
+<p>Type one line into the Console and press Return/Enter. Do not skip any lines.</p>
+
+<pre><code>alert("Hello, World!");
+var fruit = "apple";
+alert(fruit);
+alert("The fruit is " + fruit);
+
+fruit = "orange";
+alert("The fruit is " + fruit);
+
+fruit = 42;
+alert("The fruit is " + fruit + ".");
+</code></pre>
+
+<p>Note: Only use the <code>var</code> keyword the FIRST time, when you declare the variable. After that, you are assigning a new value to the variable that already exists.</p>
+
+<h2>Demo 2: Data Types</h2>
+<pre><code>var color;
+alert("The color is " + color);
+
+color = null;
+alert("The color is " + color);
+
+color = 10 + 5;
+color = 123 / 3;
+color = 10 + "5"; // number vs. string
+
+color = "blue";
+alert("The color is " + color);
+color = color + color; // concatenation
+alert("The color is " + color);
+color = color + color;
+alert("The color is " + color);
+</code></pre>
+
+<h2>Demo 3: Arrays</h2>
+<pre><code>var fruits = ["grapes", "apples", "oranges", "cantaloupes"];
+alert(fruits);
+
+alert(fruits[1]);
+alert(fruits[0]);
+alert(fruits[2] + fruits[3]);
+alert(fruits[2] + " and " + fruits[3]);
+
+fruits[2] = "lemons";
+alert(fruits);
+</code></pre>
+
+<h2>Demo 4: Booleans and Comparisons</h2>
+
+<p> No <code>alert()</code> here; just type into the Console one line at a time.</p>
+
+<pre><code>var animal1 = "cat";
+var animal2 = "dog";
+animal1 == animal2;
+animal1 != animal2;
+var cats = 6;
+var dogs = 3;
+cats > dogs;
+cats < dogs;
+var six = "6";
+cats == six; // true
+cats === six; // false
+</code></pre>
+
+<h2>Demo 5: if/else Statements</h2>
+
+<pre><code>var cat = "black";
+if (cat == "black") alert("The cat is black!");
+if (cat != "black") alert("The cat is not black!"); // nothing
+if (cat != "white") alert("The cat is not white!"); // works
+
+cat = "ginger";
+</code></pre>
+
+<p>Note: To make the following if/else block work, you'll need to copy all five lines and PASTE into the Console.</p>
+
+<pre><code>if ( cat == "black" ) {
+	alert("The cat is black!");
+} else {
+	alert("The cat is not black!");
+}
+</code></pre>
+
+<h2>Demo 6: Loops (for Statements)</h2>
+
+<p>Note: To make each of the following work, you'll need to copy a whole three-line block and PASTE it into the Console.</p>
+
+<pre><code>for ( var i = 0; i <= 50; i += 10 ) {
+	console.log(i);
+}
+
+for ( var i = 50; i >= 0; i -= 10 ) {
+	console.log(i);
+}
+</code></pre>
+
+<p>Compare the two <code>for</code> statements above to the two below:</p>
+
+<pre><code>for ( var i = 0; i <= 10; i++ ) {
+	console.log(i);
+}
+
+for ( var i = 10; i >= 0; i-- ) {
+	console.log(i);
+}
+</code></pre>
+<p>Now use an array:</p>
+<pre><code>var fruits = ["grapes", "apples", "oranges", "cantaloupes"];
+
+for ( var i = 0; i < fruits.length; i++ ) {
+	alert( fruits[i] );
+}
+</code></pre>
+<p>Here is a different format for looping through an array. It produces the same output as the previous example.</p>
+<pre><code>for ( var i in fruits ) {
+	alert( fruits[i] );
+}
+</code></pre>
+<p>Use of <em>i</em> for the variable name is not required. This works exactly the same way as the previous example.</p>
+<pre><code>for ( var fruit in fruits ) {
+	alert( fruits[fruit] );
+}
+</code></pre>
+
+<p>Next: <a href="functions.html">JavaScript Functions</a></p>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+body {
+	background: #fff093;
+	color: #333;
+	font-family: Calibri, Verdana, sans-serif;
+	font-size: 150%;
+	margin: 50px;
+	}
+img {
+    border: 10px solid #b2a347;
+}
+code {
+    font-family: monospace;
+}
+/* links */
+a { color: #3a2bb2; }
+a:hover { color: #8273ff; }
