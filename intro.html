@@ -43,15 +43,32 @@ color = null;
 alert("The color is " + color);
 
 color = 10 + 5;
-color = 123 / 3;
-color = 10 + "5"; // number vs. string
+color = 10 - 5;
+color = 50 * 3;
+color = 50 / 5;
+</code></pre>
+
+<p>Two forward slashes create a comment. A line that begins with <code>//</code> will not be executed.</p>
+
+<pre><code>// not a number
+color = 10 / "foo"
+
+// number vs. string
+color = 10 + "5";
 
 color = "blue";
 alert("The color is " + color);
-color = color + color; // concatenation
+// concatenation
+color = color + color;
 alert("The color is " + color);
 color = color + color;
 alert("The color is " + color);
+</code></pre>
+
+<p>Some numbers <em>must</em> be strings!<p>
+
+<pre><code>var socialSecurity = "321-89-4567";
+var officePhone = "352-392-3261";
 </code></pre>
 
 <h2>Demo 3: Arrays</h2>
@@ -69,7 +86,7 @@ alert(fruits);
 
 <h2>Demo 4: Booleans and Comparisons</h2>
 
-<p> No <code>alert()</code> here; just type into the Console one line at a time.</p>
+<p> No <code>alert()</code> here -- just type into the Console <em>one line at a time.</em></p>
 
 <pre><code>var animal1 = "cat";
 var animal2 = "dog";
@@ -80,16 +97,25 @@ var dogs = 3;
 cats > dogs;
 cats < dogs;
 var six = "6";
-cats == six; // true
-cats === six; // false
+
+// true
+cats == six;
+// false
+cats === six;
 </code></pre>
+
+<p>Can you determine the difference between <code>==</code> and <code>===</code>? It's important.</p>
 
 <h2>Demo 5: if/else Statements</h2>
 
 <pre><code>var cat = "black";
 if (cat == "black") alert("The cat is black!");
-if (cat != "black") alert("The cat is not black!"); // nothing
-if (cat != "white") alert("The cat is not white!"); // works
+
+// nothing
+if (cat != "black") alert("The cat is not black!");
+
+// works
+if (cat != "white") alert("The cat is not white!");
 
 cat = "ginger";
 </code></pre>
@@ -145,6 +171,8 @@ for ( var i = 0; i < fruits.length; i++ ) {
 </code></pre>
 
 <p>Next: <a href="functions.html">JavaScript Functions</a></p>
+
+<p>Published under an <a href="https://github.com/macloo/javascript-console-intro/blob/master/LICENSE">MIT License</a>. Copyright &copy; 2015 Mindy McAdams. Fork on <a href="https://github.com/macloo/javascript-console-intro">GitHub</a>.</p>
 
 </body>
 </html>
