@@ -4,13 +4,22 @@ body {
 	font-family: Calibri, Verdana, sans-serif;
 	font-size: 150%;
 	margin: 50px;
-	}
+}
 img {
     border: 10px solid #b2a347;
 }
 code {
     font-family: monospace;
+	color: #32617F;
 }
+dd {
+	margin-bottom: 20px;
+}
+.tryit{
+	display: block;
+	margin-top: 10px;
+}
+
 /* links */
 a { color: #3a2bb2; }
 a:hover { color: #8273ff; }

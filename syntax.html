@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> JavaScript Syntax Practice </title>
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+<h1>JavaScript Syntax Practice</h1>
+
+<p>Use the Console to practice some useful JavaScript methods and built-in functions. Learn to differentiate between them. When are there parentheses? What goes inside them?</p>
+
+<dl>
+<dt><code>.length</code></dt>
+<dd>
+	Property.<br>
+	Usage: <code>varname.length;</code><br>
+	Returns the number of characters (including spaces and punctuation)
+	in the string, or in the case of an array, the number of items in the array.
+	This is a PROPERTY, so there are no parentheses.
+    <span class="tryit">
+    <code>var words = "Hello, World!";</code><br>
+    <code>words.length;</code><br>
+    <code>var list = ["red", "white", "blue"];</code><br>
+    <code>list.length;</code>
+    </span>
+    </dd>
+
+<dt><code>.substring()</code></dt>
+<dd>
+	Method.<br>
+	Usage: <code>varname.substring(3);</code><br>
+	Also:  <code>varname.substring(3, 5);</code><br>
+	Returns a string that begins with index 3 in <code>varname</code> and continues either to the end of varname or to the second index supplied. Note that the first character in a string has an index of 0 (just like the first item in an array).
+    <span class="tryit">
+    <code>var wise = "Eat more fruit today.";</code><br>
+    <code>wise.substring(4);</code><br>
+    <code>wise.substring(9, 14);</code>
+    </span>
+    </dd>
+
+<dt><code>.toString()</code></dt>
+<dd>
+	Method.<br>
+	Usage: <code>varname.toString();</code><br>
+	Returns a string representing the specified Number object.
+    <span class="tryit">
+    <code>var social = 321894567;</code><br>
+    <code>var newSocial = social.toString();</code><br>
+    <code>console.log(social + " and " + newSocial);</code><br>
+    <code>social === newSocial;</code>
+    </span>
+    </dd>
+
+<dt><code>parseInt()</code></dt>
+<dd>
+	Function.<br>
+	Usage: <code>parseInt(varname, 10);</code><br>
+	If <code>varname</code> is a string containing a number or numbers, an integer is returned. (10 means "base 10." Other bases may be used.)
+	If <code>varname</code> cannot be converted, the result will be NaN (which means "not a number").<br>
+	This will return NaN:<code> parseInt("Hello", 10);</code><br>
+    NOTE: If <code>varname</code> is a string containing a number with decimal places, use <code>parseFloat()</code> to return a float. Otherwise, everything after the decimal will be lost.
+    <span class="tryit">Try this:<br>
+    <code>var age = prompt("What is your age? ");</code><br>
+    <code>var newAge = age + 10;</code><br>
+    <code>alert("In 10 years you will be " + newAge + " years old.");</code><br>
+    </span>
+    <span class="tryit">Not the answer you expected? Try this:<br>
+    <code>newAge = parseInt(age, 10) + 10;</code><br>
+    <code>alert("In 10 years you will be " + newAge + " years old.");</code>
+    </span>
+    </dd>
+
+<dt><code>isNaN()</code></dt>
+<dd>
+	Function.<br>
+	Usage: <code>isNaN(varname);</code><br>
+	Returns <em>true</em> if varname is NOT a number.
+    <span class="tryit">
+    <code>var earth = "round";</code><br>
+    <code>var circle = 360;</code><br>
+    <code>isNaN(earth);</code><br>
+    <code>isNaN(circle);</code>
+    </span>
+    </dd>
+
+<dt><code>Math.random()</code></dt>
+<dd>
+	Function.<br>
+	Usage: <code>var num = Math.random();</code><br>
+	That will return a value such as 0.43021444068290293 -- a number between 0 and 1.<br>
+	<code>var randy = Math.floor(Math.random() * 6) + 1;</code><br>
+	Without + 1, you would get random numbers from 0 to 5 (total of 6 possibilities).
+    With + 1, you get random numbers from 1 to 6 -- which is like rolling a die.
+    Random numbers are generated in games to determine all kinds of qualities, such as health or strength. Usually there is a top and a bottom limit. (See below for <code>.floor </code>vs.<code> .round</code>. When generating random numbers for gameplay, <code>.floor</code> provides a more uniform distribution than <code>.round</code>.)
+    <span class="tryit">
+    <code>var number = Math.floor(Math.random() * 100) + 1;</code><br>
+    <code>var guess = prompt("Type a number between 1 and 100. ")</code><br>
+    <code>guess = parseInt(guess, 10);</code><br>
+    <code>if (guess < number) { confirm("Your guess is too low.
+        Try again?") };</code><br>
+    <code>if (guess > number) { confirm("Your guess is too high.
+        Try again?") };</code>
+    </span>
+    </dd>
+
+<dt><code>Math.floor()</code></dt>
+<dd>
+	Function.<br>
+    Usage: <code>Math.floor(41.9999); // returns 41</code><br>
+	Returns the largest integer less than or equal to a given number.
+	Thus it never "rounds up," but always "down."
+    <span class="tryit">
+    <code>var num = 4.9;</code><br>
+    <code>var newNum = Math.floor(num);</code><br>
+    <code>console.log(num + " becomes " + newNum);</code>
+    </span>
+    </dd>
+
+<dt><code>Math.round()</code></dt>
+<dd>
+	Function.<br>
+	Usage: <code>Math.round(41.9999); // returns 42</code><br>
+	Usage: <code>Math.round(41.4999); // returns 41</code><br>
+	Returns the value of a number rounded to the nearest integer.
+    <span class="tryit">
+    <code>var nums = 4.9;</code><br>
+    <code>var newNums = Math.round(nums);</code><br>
+    <code>console.log(nums + " becomes " + newNums);</code>
+    </span>
+    </dd>
+</dl>
+
+<p>Published under an <a href="https://github.com/macloo/javascript-console-intro/blob/master/LICENSE">MIT License</a>. Copyright &copy; 2015 Mindy McAdams. Fork on <a href="https://github.com/macloo/javascript-console-intro">GitHub</a>.</p>
+
+</body>
+</html>

@@ -75,7 +75,7 @@ getPet();
 
 <h2>Return</h2>
 
-<p>The <em>return</em> keyword is used inside a function to get a value, or values, out of the function so the values (the results of your function) can be used elsewhere in your script.</p>
+<p>The <code>return</code> keyword is used inside a function to get a value, or values, out of the function so the values (the results of your function) can be used elsewhere in your script.</p>
 
 <pre><code>function getVolume(length, width, height) {
 	var volume = length * width * height;
@@ -85,7 +85,7 @@ getPet();
 alert( getVolume(5, 3, 10) );
 </code></pre>
 
-<p>Now one more change, and our function looks more like what a real programmer would write, using <em>return</em>:</p>
+<p>Now one more change, and our function looks more like what a real programmer would write, using <code>return</code>:</p>
 
 <pre><code>function getVolume(length, width, height) {
 	return length * width * height;
@@ -94,7 +94,7 @@ alert( getVolume(5, 3, 10) );
 alert( getVolume(5, 3, 10) );
 </code></pre>
 
-<p>Note that the <em>return</em> keyword can be used only ONCE in a function, and if there are any instructions following the <em>return</em> instruction, they will not be executed. The exception to this is when the <em>return</em> instruction is inside an if-statement.</p>
+<p>Note that the <code>return</code> keyword can be used only ONCE in a function, and if there are any instructions following the <code>return</code> instruction, they will not be executed. The exception to this is when the <code>return</code> instruction is inside an if-statement.</p>
 
 <pre><code>function getPet() {
 	var discussPet = confirm("Do you want to discuss your pet?");
@@ -109,7 +109,7 @@ alert( getVolume(5, 3, 10) );
 alert ( getPet() );
 </code></pre>
 
-<p>In the case above, we see two <em>return</em> instructions, but only ONE  will be executed. Which one depends on your answer to the first question, "Do you want to discuss your pet?" If you select OK, the value of your answer is <em>true,</em> which is the same as 1. If you select Cancel, the value of your answer is <em>false,</em> which is the same as 0.</p>
+<p>In the case above, we see two <code>return</code> instructions, but only ONE  will be executed. Which one depends on your answer to the first question, "Do you want to discuss your pet?" If you select OK, the value of your answer is <em>true,</em> which is the same as 1. If you select Cancel, the value of your answer is <em>false,</em> which is the same as 0.</p>
 
 <h2>Scope</h2>
 
@@ -139,6 +139,10 @@ alert ( getPet() );
 <p>What this proves is that when you used <code>var petName</code> inside the function, you made a <strong>local</strong> variable that was isolated inside the function. It had no effect on the <strong>global</strong> variable <code>petName</code> (declared outside the function), and so the value of the global variable remained unchanged: "Truman Cat."</p>
 
 <p>What if you wanted to change the value of the global variable via instructions inside your function? (This can be risky.) To do so, change just one thing inside the function: omit the <em>var</em> keyword. If you do, the <strong>global</strong> variable <code>petName</code> will be changed when your function runs.</p>
+
+<p>Next: <a href="syntax.html">JavaScript Syntax Practice</a></p>
+
+<p>Published under an <a href="https://github.com/macloo/javascript-console-intro/blob/master/LICENSE">MIT License</a>. Copyright &copy; 2015 Mindy McAdams. Fork on <a href="https://github.com/macloo/javascript-console-intro">GitHub</a>.</p>
 
 </body>
 </html>
