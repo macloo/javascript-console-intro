@@ -25,3 +25,14 @@ After that, this second file -- [JavaScript Functions](http://macloo.github.io/j
 
 The order of examples follows Chapter 19 in *Learning Web Design Fourth Edition
 A Beginner’s Guide to HTML, CSS, JavaScript, and Web Graphics,* by Jennifer Niederst Robbins. The examples are my own, although they are aligned with examples given in the chapter.
+
+A third file -- [JavaScript Syntax Practice](http://macloo.github.io/javascript-console-intro/syntax.html) -- is also set up for practice using the console. It covers the following property, methods and functions:
+
+- `length`
+- `substring()`
+- `toString()`
+- `parseInt()`
+- `isNaN()`
+- `Math.random()`
+
+I chose these because they come up often in early programming exercises, and I thought it might be nice to corral them all in one place for easy reference.
