@@ -5,6 +5,9 @@ body {
 	font-size: 150%;
 	margin: 50px;
 }
+section {
+	border-bottom: 2px dotted #999;
+}
 img {
     border: 10px solid #b2a347;
 }
